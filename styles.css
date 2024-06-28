@@ -1,0 +1,320 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #4f3d3dc9;
+    background: url('imagen/1.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1 {
+    font-family: 'Playfair Display', serif;
+    color: #FFD700; /* Dorado */
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: #e1b906;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+/* Cabecera */
+.header {
+    background-color: #042a3a;
+    color: #FFD700; /* Dorado */
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+/* Login Container */
+.login-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+}
+
+#login-form, #register-form {
+    display: none;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+#login-toggle, #register-toggle {
+    background-color: #0c508a;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+#login-form label, #register-form label,
+#login-form input, #register-form input,
+#login-form button, #register-form button {
+    display: block;
+    margin: 5px 0;
+}
+
+#login-form input, #register-form input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form button, #register-form button {
+    background-color: #646302;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilos para mensajes de éxito y error */
+.message {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+/* Carrusel de Imágenes */
+.carousel-section {
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    border-radius: 10px;
+    max-width: 40%; /* Ajustar el tamaño del carrusel */
+    margin: 0 auto;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-images img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.carousel-images img:hover {
+    transform: scale(1.2); /* Ampliar imagen al hacer hover */
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px 0;
+}
+
+.indicator {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #FFD700; /* Dorado */
+}
+
+/* Sección de Menú Dinámico */
+.menu-section {
+    padding: 50px 0;
+    background-color: rgba(244, 244, 244, 0.8);
+    text-align: center;
+    border-radius: 10px;
+}
+
+.menu-links {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu-links li {
+    margin: 0;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #99aebd;
+    color: #1d1c1c;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.menu-links a:hover {
+    background-color: #1C86EE;
+}
+
+.dynamic-section {
+    padding: 20px;
+    margin: 0 0 30px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dynamic-section h2 {
+    font-size: 2em;
+    color: #070707c9;
+    margin-bottom: 20px;
+}
+
+.dynamic-section p {
+    font-size: 1.2em;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+.dynamic-section form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1em;
+}
+
+.dynamic-section form input[type="text"],
+.dynamic-section form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dynamic-section form .btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+.dynamic-section form .btn:hover {
+    background-color: #218838;
+}
+
+/* Pie de Página */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .menu-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel-control {
+        font-size: 1.5em;
+    }
+}
